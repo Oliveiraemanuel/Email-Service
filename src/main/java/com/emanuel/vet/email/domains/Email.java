@@ -1,5 +1,6 @@
 package com.emanuel.vet.email.domains;
 
+import com.emanuel.vet.email.dtos.EmailDTO;
 import com.emanuel.vet.email.enums.StatusEmail;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -27,4 +28,11 @@ public class Email {
     private LocalDateTime sendDateEmail;
 
     private StatusEmail statusEmail;
+
+    public Email(EmailDTO data) {
+        this.fromEmail = data.from();;
+        this.toEmail = data.to();
+        this.subject = data.subject();
+        this.text = data.text();
+    }
 }
