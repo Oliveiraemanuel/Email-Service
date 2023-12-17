@@ -26,8 +26,8 @@ public class EmailService {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
 
-            message.setFrom("no-reply@chaka.live");
-            message.setTo(email.getTo());
+            message.setFrom(email.getFromEmail());
+            message.setTo(email.getToEmail());
             message.setSubject(email.getSubject());
             message.setText(email.getText());
 
