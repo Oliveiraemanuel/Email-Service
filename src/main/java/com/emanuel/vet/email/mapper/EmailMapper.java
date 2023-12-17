@@ -11,8 +11,8 @@ public interface EmailMapper {
 
     EmailMapper INSTANCE = Mappers.getMapper(EmailMapper.class);
 
-    @Mapping(source = "from", target = "from")
-    @Mapping(source = "to", target = "to")
+    @Mapping(source = "from", target = "fromEmail")
+    @Mapping(source = "to", target = "toEmail")
     @Mapping(source = "subject", target = "subject")
     @Mapping(source = "text", target = "text")
 
