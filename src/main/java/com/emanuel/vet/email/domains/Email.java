@@ -15,9 +15,9 @@ public class Email {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String from;
+    private String fromEmail;
 
-    private String to;
+    private String toEmail;
 
     private String subject;
 
